@@ -1,3 +1,6 @@
+// $ mongoimport --db planets --collection types planets.json --jsonArray
+
+
 var mongoose = require('mongoose');
 
 // This connects us to our database

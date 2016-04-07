@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 require('./db/database');
 
 var routes = require('./controllers/index');
-var users = require('./controllers/users');
+var places = require('./controllers/places');
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/places', places);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
